@@ -6,9 +6,6 @@ export class RestResponse {
   }
 
   toJSON() {
-    return {
-      data: this.data,
-      error: this.error
-    };
+    return this.error ? { error: this.error } : this.data
   }
 }

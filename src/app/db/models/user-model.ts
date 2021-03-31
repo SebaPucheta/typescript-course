@@ -4,7 +4,10 @@ import { CustomModel } from './model'
 const UserSchema: mongoose.Schema = new mongoose.Schema({
   firstName: String,
   lastName: String,
-  email: String
+  email: String,
+  webhooks: [{
+    type: mongoose.Schema.Types.Mixed
+  }]
 });
 
 const userModel = mongoose.model('User', UserSchema);

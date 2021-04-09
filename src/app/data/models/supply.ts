@@ -2,8 +2,8 @@ import { Model } from './model';
 import { Validatable, Validator, ValidatorError } from '../../common';
 import { GetAmount } from '../decorators'
 
-@GetAmount(true)
-export class Product extends Model implements Validatable {
+@GetAmount(false)
+export class Supply extends Model implements Validatable {
   public name: string;
   public description: string;
   public amount: string
@@ -16,7 +16,7 @@ export class Product extends Model implements Validatable {
   }
 
   validate(): Array<ValidatorError> {
-    return Validator.validate(this, Product.MODEL_CONSTRAINTS);
+    return Validator.validate(this, Supply.MODEL_CONSTRAINTS);
   }
 
   isValid() { return this.validate() === undefined; }

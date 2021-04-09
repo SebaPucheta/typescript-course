@@ -22,3 +22,6 @@ build/
 *.tmp
 *.bak
 *.swp
+coverage
+.vscode
+.nyc_output

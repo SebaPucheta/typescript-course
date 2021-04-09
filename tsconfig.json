@@ -11,6 +11,7 @@
         "sourceMap": true,
         "inlineSources": true,
         "skipLibCheck": true,
+        "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
             "*": ["*", "./src/@types_local/*"]
